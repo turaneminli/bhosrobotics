@@ -1,0 +1,38 @@
+
+
+{% extends 'base.html' %}
+{% block content %}
+    <main>
+        <section id="greeting" style="background-image: url(assets/img/home/news-events.png);">
+            <div class="container">
+                <div class="title">
+                    <div class="row">
+                        <h1>News</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news">
+            <div class="container">
+                <div class="section_header">
+                    <h1>News</h1>
+                </div>
+                
+                <div class="container pt-5">
+                    <div class="row">
+    
+                        <div id="instafeed"></div>
+    
+                    </div>
+                </div>
+            </div>
+
+            <div class="container d-flex justify-content-center">
+                <button class="btn" id="load_more">Load More</button>
+            </div>
+        </section>
+
+
+    </main>
+{% endblock content %}

@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <main>
+        <section id="greeting" style="background-image: url({{ head.0.thumbnail.url }});">
+            <div class="container">
+                <div class="title">
+                    <div class="row">
+                        <h1>{{head.0.head_statement}}</h2>
+                    </div>
+                    <div class="row">
+                        <h1>Robotics Center</h2> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="line"></div>
+
+        <!-- Project part begins -->
+        <section id="project">
+            <div class="container-fluid m-0 p-0">
+                <div class="project_slider owl-theme owl-carousel">
+                    
+                    {% for project in projects%}
+                    <div class="project_item">
+                            <img src="{{project.project_image.url}}" alt="Project">
+                        <div class="project_bottom">
+                            <div class="background_opacity"></div>
+                            <h3>
+                                {{project.project_title}}
+                            </h3>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </section>
+        <!-- Project part ends -->
+
+        <!-- Project part begins -->
+        <section id="about" class="section_padding_bottom">
+            <div class="container-fluid m-0 p-0">
+                <div class="about_slider owl-theme owl-carousel">
+                    <div class="about_item colored">
+                        <div class="section_title">
+                            <span><i class="fas fa-users"></i></span>
+                            <h2>{{faculty.0.faculty_member_number}}</h2>
+                        </div>      
+                        <div class="section_content">
+                            <p>
+                                {{faculty.0.faculty_member_footer}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about_item not_colored">
+                        <div class="section_title">
+                            <h2>{{faculty.0.robotics_center_info_title}} </h2>
+                        </div>      
+                        <div class="section_content">
+                            <p>
+                                {{faculty.0.robotics_center_info_about}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about_item colored">
+                        <div class="section_title">
+                            <span><i class="fas fa-users"></i></span>
+                            <h2>{{faculty.0.students_number}}</h2>
+                        </div>      
+                        <div class="section_content">
+                            <p>
+                                {{faculty.0.students_number_footer}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about_item not_colored">
+                        <div class="section_title">
+                            <h2>{{faculty.0.department_title}}</h2>
+                        </div>      
+                        <div class="section_content">
+                            <p>
+                                {{faculty.0.department_info_under_title}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Project part ends -->
+
+        <section id="news_events" data-aos="fade-up"  style="background-image: url(assets/img/home/news-events.png);">
+
+            <div class="title">
+                <h1>News and Events</h1>
+            </div>
+
+            <div class="container pt-5">
+                <div class="row">
+
+                    <div id="instafeed-container"></div>
+
+                    <!-- <div class="col-lg-3">
+                        <div class="news_item">
+                            <div class="image">
+                                <img src="assets/img/article13524.largethumb.jpg" alt="">
+
+                                <div class="fade_image"></div>
+                            </div>
+                            <div class="news_detail">
+                                <span class="time">09 Sun,2012</span>
+                                <p class="content">Salam ay yetka necesen veziyyet necedi tipli auyes yarismasi</p>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+
+            <div class="container padding">
+                <div class="event_slider owl-theme owl-carousel">
+                    {% for event in events %}
+                    <div class="event_item">
+                        <div class="event_title">
+                            <p>{{event.event_name}}</p>
+                            <h2>
+                                {{event.event_time.year}} 
+                            </h2>
+                        </div>
+                        <div class="event_bottom">
+                            <span><i class="far fa-calendar-alt"></i></span>
+                            <p>{{event.event_time}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+
+        </section>
+
+
+    </main>
+{% endblock content %}

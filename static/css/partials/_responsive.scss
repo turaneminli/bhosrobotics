@@ -1,0 +1,108 @@
+// @media only screen and (min-width: 1500px){
+// }
+
+// @media only screen and (min-width: 991px) { 
+// }
+
+// @media only screen and (min-width: 768px) { 
+// }
+
+// @media only screen and (min-width:577px){ 
+// }
+
+// @media only screen and (max-width: 1499px){
+// }
+
+@media only screen and (max-width: 991px){
+  body{
+    header{
+      #lower_nav{
+        nav{
+          .col-2{
+            display: block;
+            .menu_btn{
+              display: block;
+            }
+          }
+          .row{
+            justify-content: space-between;
+            align-items: center;
+          }
+          .navigation_bar{
+            display: none!important;
+          }
+        }
+      }
+    }
+  }
+
+  body{
+    footer{
+      #university{
+        .name{
+          justify-content: center;
+        }
+
+        .icons{
+          justify-content: center!important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) { 
+  .accordion {
+      
+    height:auto;
+    
+    ul,ul:hover {
+      
+      li,li:hover {
+        
+        position:relative;
+        display:table;
+        table-layout:fixed;
+        width:100%;
+        
+        -webkit-transition:none;
+        transition:none;
+        
+      }
+      
+    }
+    
+  }
+}
+
+@media only screen and (max-width: 576px){ 
+  body{
+    #aboutus{
+      .content{
+        p{
+          font-size: 16px!important;
+        }
+      }
+    }
+  }
+
+  body{
+    #contact{
+      .contact_content{
+        padding:15px!important
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 487px){ 
+  body{
+    #aboutus{
+      .content{
+        p{
+          font-size: 12px!important;
+        }
+      }
+    }
+  }
+}

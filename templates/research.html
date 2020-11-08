@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block content %}
+    <main>
+        <section id="greeting" style="background-image: url(assets/img/researchs/research-bg.jpg);">
+            <div class="container">
+                <div class="title">
+                    <div class="row">
+                        <h1>What have we done till</h2>
+                    </div>
+                    <div class="row">
+                        <h1>This time</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="research">
+            <div class="container">
+                <div class="section_header">
+                    <h1>Research</h1>
+                </div>
+
+                {% for research in researches %}
+                <div class="row">
+                    
+                    {% if research.id|divisibleby:2 %}
+                    <div class="col-sm-12 order-4 order-md-3 col-md-6 research_item">
+                        <div class="research_content">
+                            <div class="header">
+                                <h3>
+                                    {{research.research_title}}
+                                </h3>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    {{research.research_content}}
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                     <div class="col-sm-12 order-3 order-md-4 col-md-6 research_item">
+                        <div class="image">
+                            <img src="{{research.research_image.url}}" alt="">
+                        </div>
+                    </div>
+                    
+                    {% else %}
+                    
+
+
+                    <div class="col-12 order-1 col-md-6 research_item">
+                        <div class="image">
+                            <img src="{{research.research_image.url}}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 order-2 col-md-6 research_item">
+                        <div class="research_content">
+                            <div class="header">
+                                <h3>
+                                    {{research.research_title}}
+                                </h3>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    {{research.research_content}}
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+
+    </main>
+
+{% endblock content %}

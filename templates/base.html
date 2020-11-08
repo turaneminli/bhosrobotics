@@ -1,0 +1,116 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baku Higher Oil School - Robotics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'plugins/css/owl.carousel.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'plugins/css/owl.theme.default.min.css'%}">
+    <link rel="stylesheet" href="{% static 'plugins/css/aos.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body data-aos="fade-down">
+    <header>
+        <div id="upper_nav">
+            <div class="container">
+                <div class="row">
+                    <div class="title">
+                        <a target="_blank" href="http://www.bhos.edu.az/az/index">Baku Higher Oil School</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="lower_nav">
+            <nav>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-4 offset-lg-1 col-lg-2">
+                            <div class="logo">
+                                <a href="{% url 'home' %}"><img src="{% static 'assets/img/logo/bhos-logo.png' %}" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="menu_btn">
+                                <div class="burger_btn"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="navigation_bar">
+                                <ul>
+                                    <li><a href="{% url 'about' %}">About</a></li>
+                                    <li><a href="{% url 'research' %}">Research</a></li>
+                                    <li><a href="{% url 'vision' %}">Vision</a></li>
+                                    <li><a href="{% url 'news' %}">News</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_navigation_bar">
+                                <ul>
+                                    <li><a href="{% url 'about' %}">About</a></li>
+                                    <li><a href="{% url 'research' %}">Research</a></li>
+                                    <li><a href="{% url 'vision' %}">Vision</a></li>
+                                    <li><a href="{% url 'news' %}">News</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    {% block content %}
+    {% endblock content %}
+
+    <footer>
+        <section id="university">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="name">
+                            <h5><a href="">Baku Higher Oil School</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="icons">
+                            <ul>
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                                <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="copyright">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h6><p>Copyright @2020 Developed by &nbsp; <a href="https://istechlal.com/" target="_blank"> Istechlal Group</a></p></h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="{% static 'plugins/js/fontawesome.js' %}"></script>
+    <script src="{% static 'plugins/js/jquery.js' %}"></script>
+    <script src="{% static 'plugins/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'plugins/js/instafeed.js' %}"></script>
+    <script src="{% static 'plugins/js/smoove.js' %}"></script>
+    <script src="{% static 'plugins/js/aos.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
