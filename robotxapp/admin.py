@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import head_thumbnail, Project, Faculty, Event, Research, Research_head, Vision, News, About, Contact
+from .models import head_thumbnail, Project, Faculty, Event, Research, Research_head, Vision, News, About, Contact, Social
 
 # Register your models here.
 admin.site.register(head_thumbnail)
@@ -12,3 +12,4 @@ admin.site.register(Vision)
 admin.site.register(News)
 admin.site.register(About)
 admin.site.register(Contact)
+admin.site.register(Social)

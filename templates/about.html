@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="content">
-                            <p>{{about.0.about_content}}</p>
+                            <p>{{about.0.about_content|safe}}</p>
                         </div>
                     </div>
 
@@ -58,7 +58,7 @@
                                 </div>
                             </div>
                             <div class="content">
-                                <p>{{about.0.faculty_content}} </p>
+                                <p>{{about.0.faculty_content|safe}} </p>
                             </div>
                         </div>
                     </div>
@@ -81,17 +81,17 @@
                                 <div class="row">
                                     <div class="col-12 col-lg-4">
                                         <div class="image">
-                                            <a href="https://global.abb/group/en" target="_blank"><img src="{{about.0.partner_image1.url}}" alt=""></a>
+                                            <a href="{{about.0.partner_link1}}" target="_blank"><img src="{{about.0.partner_image1.url}}" alt=""></a>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-4">
                                         <div class="image">
-                                            <a href="https://www.emerson.com/global" target="_blank"><img src="{{about.0.partner_image2.url}}" alt=""></a>
+                                            <a href="{{about.0.partner_link2}}" target="_blank"><img src="{{about.0.partner_image2.url}}" alt=""></a>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-4">
                                         <div class="image">
-                                            <a href="https://www.se.com/az/en/" target="_blank"><img src="{{about.0.partner_image3.url}}" alt=""></a>
+                                            <a href="{{about.0.partner_link3}}" target="_blank"><img src="{{about.0.partner_image3.url}}" alt=""></a>
                                         </div>
                                     </div>
                                 </div>

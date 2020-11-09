@@ -19,11 +19,11 @@
                 <div class="section_header">
                     <h1>Research</h1>
                 </div>
-
+                
                 {% for research in researches %}
                 <div class="row">
+                    {% if forloop.counter|divisibleby:2 %}
                     
-                    {% if research.id|divisibleby:2 %}
                     <div class="col-sm-12 order-4 order-md-3 col-md-6 research_item">
                         <div class="research_content">
                             <div class="header">

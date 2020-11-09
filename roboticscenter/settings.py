@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #download
-    # 'djrichtextfield',
+    'djrichtextfield',
 
     #crispy
     # 'crispy_forms',
@@ -130,18 +130,24 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
+# for server
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'static/')
+# STATIC_ROOT = "/home/bhosrobotics/bhosrobotics/static"
+
+
 # plugin for rich text
 
-# DJRICHTEXTFIELD_CONFIG = {
-#     'js': ['//cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'],
-#     'init_template': 'djrichtextfield/init/tinymce.js',
-#     'settings': {
-#         'menubar': False,
-#         'plugins': 'link image',
-#         'toolbar': 'bold italic | link image | removeformat',
-#         'width': 700
-#     }
-# }
+DJRICHTEXTFIELD_CONFIG = {
+    'js': ['//cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'],
+    'init_template': 'djrichtextfield/init/tinymce.js',
+    'settings': {
+        'menubar': False,
+        'plugins': 'link image table code',
+        'toolbar': 'bold italic | link image | removeformat'
+                    ' link unlink image table | code',
+        'width': 700
+    }
+}
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
