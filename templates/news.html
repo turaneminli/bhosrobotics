@@ -3,11 +3,11 @@
 {% extends 'base.html' %}
 {% block content %}
     <main>
-        <section id="greeting" style="background-image: url(assets/img/home/news-events.png);">
+        <section id="greeting" style="background-image: url({{news.0.thumbnail.url}});">
             <div class="container">
                 <div class="title">
                     <div class="row">
-                        <h1>News</h2>
+                        <h1>{{news.0.head_statement}}</h2>
                     </div>
                 </div>
             </div>

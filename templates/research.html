@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
     <main>
-        <section id="greeting" style="background-image: url(assets/img/researchs/research-bg.jpg);">
+        <section id="greeting" style="background-image: url({{research_head.0.thumbnail.url}});">
             <div class="container">
                 <div class="title">
                     <div class="row">
-                        <h1>What have we done till</h2>
+                        <h1>{{research_head.0.head_statement}}</h2>
                     </div>
                     <div class="row">
-                        <h1>This time</h2>
+                        <h1>{{research_head.0.second_row}}</h2>
                     </div>
                 </div>
             </div>

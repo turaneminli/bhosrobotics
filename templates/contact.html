@@ -2,11 +2,11 @@
 {% block content %}
 
     <main>
-        <section id="greeting" style="background-image: url(assets/img/contact/contact-bg.jpg);">
+        <section id="greeting" style="background-image: url({{contact.0.thumbnail.url}});">
             <div class="container">
                 <div class="title">
                     <div class="row">
-                        <h1>Contact</h2>
+                        <h1>{{contact.0.head_statement}}</h2>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-12 col-lg-6">
                         <div class="image">
-                            <img src="assets/img/contact/banm.jpg" alt="">
+                            <img src="{{contact.0.contact_image.url}}" alt="">
                         </div>
                     </div>
 
@@ -44,8 +44,8 @@
                                     </li>
                                 </ul>
 
-                                <p class="tel"><span>Telephone:</span> <a href="tel:+994125213363 ">(012) 521 33 63</a></p>
-                                <p class="mail"><span>Email:</span><a href="mailto:info@bhos.edu.az">info@bhos.edu.az</a></p>
+                                <p class="tel"><span>Telephone:</span> <a href="tel:{{contact.0.telephone}} ">{{contact.0.telephone}}</a></p>
+                                <p class="mail"><span>Email:</span><a href="mailto:{{contact.0.email}}">{{contact.0.email}}</a></p>
                             </div>
                         </div>
                     </div>

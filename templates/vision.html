@@ -1,14 +1,14 @@
 {% extends 'base.html'%}
 {% block content %}
     <main>
-        <section id="greeting" style="background-image: url(assets/img/visions/vision-bg.jpg);">
+        <section id="greeting" style="background-image: url({{vision.0.thumbnail.url}});">
             <div class="container">
                 <div class="title">
                     <div class="row">
-                        <h1>What do we desire to do</h2>
+                        <h1>{{vision.0.head_statement}}</h2>
                     </div>
                     <div class="row">
-                        <h1>in the Future</h2>
+                        <h1>{{vision.0.second_row}}</h2>
                     </div>
                 </div>
             </div>
@@ -24,27 +24,27 @@
             <div class="container">
                 <div class="accordion">
                     <ul>
-                      <li tabindex="1" style="background-image: url(assets/img/visions/vision/1.jpg);">
+                      <li tabindex="1" style="background-image: url({{vision.0.goal_image_1.url}});">
                         <div>
                           <a>
-                            <h2>Lorem Ipsum</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit et magni nam vitae autem vel in voluptatibus eaque modi, sapiente atque blanditiis saepe commodi ullam soluta nemo quis necessitatibus nostrum?</p>
+                            <h2>{{vision.0.goal_title_1}}</h2>
+                            <p>{{vision.0.goal_content_1}}</p>
                           </a>
                         </div>
                       </li>
-                      <li tabindex="2" style="background-image: url(assets/img/visions/vision/2.jpg);">
+                      <li tabindex="2" style="background-image: url({{vision.0.goal_image_2.url}});">
                         <div>
                           <a>
-                            <h2>Lorem Ipsum</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                            <h2>{{vision.0.goal_title_2}}</h2>
+                            <p>{{vision.0.goal_content_2}}</p>
                           </a>
                         </div>
                       </li>
-                      <li tabindex="3" style="background-image: url(assets/img/visions/vision//3.png);">
+                      <li tabindex="3" style="background-image: url({{vision.0.goal_image_3.url}});">
                         <div>
                           <a>
-                            <h2>Lorem Ipsum</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                            <h2>{{vision.0.goal_title_3}}</h2>
+                            <p>{{vision.0.goal_content_3}}</p>
                           </a>
                         </div>
                       </li>

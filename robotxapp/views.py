@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, TemplateView
-from .models import head_thumbnail, Project, Faculty, Event, Research
+from .models import head_thumbnail, Project, Faculty, Event, Research, Research_head, Vision, About, News, Contact
 # Create your views here.
 
 class HomePageView(TemplateView):
@@ -20,24 +20,68 @@ class HomePageView(TemplateView):
 			'projects': project,
 			'faculty': fac,
 			'events': event,
-			'res': res
+			'res': res, 
+            'news': News.objects.all()
+		}
+        
+        return render(request, template_name, context)
+
+
+
+class ResearchView(TemplateView):
+    template_name = 'research.html'
+    
+    def get(self, request, *args, **kwargs):
+        
+        template_name = 'research.html'
+        
+        context = {
+			'researches': Research.objects.all(),
+			'research_head': Research_head.objects.all(),
+		}
+        
+        return render(request, template_name, context)
+
+class VisionView(TemplateView):
+    def get(self, request, *args, **kwargs):
+        
+        template_name = 'vision.html'
+        
+        context = {
+			'vision': Vision.objects.all(),
+		}
+        
+        return render(request, template_name, context)
+
+class NewsView(TemplateView):
+    def get(self, request, *args, **kwargs):
+        
+        template_name = 'news.html'
+        
+        context = {
+			'news': News.objects.all(),
+		}
+        
+        return render(request, template_name, context)
+
+class ContactView(TemplateView):
+    def get(self, request, *args, **kwargs):
+        
+        template_name = 'contact.html'
+        
+        context = {
+			'contact': Contact.objects.all(),
 		}
         
         return render(request, template_name, context)
 
 class AboutView(TemplateView):
-    template_name = 'about.html'
-
-class ResearchView(ListView):
-    model = Research
-    template_name = 'research.html'
-    context_object_name = 'researches'
-
-class VisionView(TemplateView):
-    template_name = 'vision.html'
-
-class NewsView(TemplateView):
-    template_name = 'news.html'
-
-class ContactView(TemplateView):
-    template_name = 'contact.html'
+    def get(self, request, *args, **kwargs):
+        
+        template_name = 'about.html'
+        
+        context = {
+			'about': About.objects.all(),
+		}
+        
+        return render(request, template_name, context)

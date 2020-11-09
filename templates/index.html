@@ -9,7 +9,7 @@
                         <h1>{{head.0.head_statement}}</h2>
                     </div>
                     <div class="row">
-                        <h1>Robotics Center</h2> 
+                        <h1>{{ head.0.second_row}} </h2> 
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@
         </section>
         <!-- Project part ends -->
 
-        <section id="news_events" data-aos="fade-up"  style="background-image: url(assets/img/home/news-events.png);">
+        <section id="news_events" data-aos="fade-up"  style="background-image: url({{news.0.thumbnail.url}});">
 
             <div class="title">
                 <h1>News and Events</h1>
@@ -125,7 +125,7 @@
                         <div class="event_title">
                             <p>{{event.event_name}}</p>
                             <h2>
-                                {{event.event_time.year}} 
+                                {{event.event_text}} 
                             </h2>
                         </div>
                         <div class="event_bottom">
